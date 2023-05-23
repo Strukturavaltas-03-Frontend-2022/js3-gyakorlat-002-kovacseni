@@ -1,8 +1,6 @@
 
 function setCookie(text) {
-    const now = new Date();
-    const expirationTime = Date.now() + (15 * 60 * 1000);
-    now.setTime(expirationTime);
+    const expirationTime = new Date(Date.now() + (15 * 60 * 1000));
     const expires = now.toUTCString();
     document.cookie = `token=${text};expires=${expires}`;
 }
